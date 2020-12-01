@@ -1,12 +1,26 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using myTunes.Core.Entities;
+using myTunes.Infrastructure.Configurations;
 
-namespace myTunes.Infrastructure
+namespace shoponline.Infrastructure
 {
-    class Program
+    public class myTunesDbContext : DbContext
     {
-        static void Main(string[] args)
+        public myTunesDbContext(DbContextOptions options) :
+            base(options)
         {
-            Console.WriteLine("Hello World!");
+
+        }
+
+        public DbSet<Song> Songs { get; set; }
+
+        public DbSet<Album> Albums { get; set; }
+
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.ApplyConfiguration(new SongConfiguration());
+            modelBuilder.ApplyConfiguration(new AlbumConfiguration());
         }
     }
 }

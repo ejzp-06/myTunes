@@ -6,6 +6,12 @@ namespace myTunes.Core.Entities
 {
     public class Album
     {
+        public Album()
+        {
+            Songs = new List<Song>();
+        }
+        public ICollection<Song> Songs { get; set; }
+
         public int Id { get; set; }
 
         public string Name { get; set; }
@@ -23,7 +29,5 @@ namespace myTunes.Core.Entities
         public string Image { get; set; }
 
         public int Price { get; set; }
-
-        public Song Songs { get; set; }
     }
 }

@@ -12,23 +12,7 @@ namespace myTunes.Infrastructure.Configurations
 
             builder.Property(x => x.Id).ValueGeneratedOnAdd();
 
-            builder.Property(x => x.Name).IsRequired();
-
-            builder.Property(x => x.Author).IsRequired();
-
-            builder.Property(x => x.Genre).IsRequired();
-
-            builder.Property(x => x.LaunchDate).IsRequired();
-
-            builder.Property(x => x.points).IsRequired();
-
-            builder.Property(x => x.Songs).IsRequired();
-
-            builder.Property(x => x.Price).IsRequired();
-
-            builder.Property(x => x.Image).IsRequired();
-
-            builder.Property(x => x.Description).IsRequired();
+            builder.HasMany(x => x.Songs);
         }
     }
 }

@@ -19,5 +19,10 @@
     <ProjectReference Include="..\myTunes.Infrastructure\myTunes.Infrastructure.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Middlewares\" />
+    <Folder Include="Services\" />
+  </ItemGroup>
+
 
 </Project>

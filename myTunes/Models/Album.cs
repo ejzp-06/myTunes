@@ -25,6 +25,6 @@ namespace myTunes.Models
 
         public int Price { get; set; }
 
-        public Song Songs { get; set; }
+        public IEnumerable<Song> Songs { get; set; }
     }
 }

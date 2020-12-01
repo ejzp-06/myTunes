@@ -12,52 +12,46 @@ namespace myTunes.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class SongController : ControllerBase
+    public class CategoriesController : ControllerBase
     {
-        private readonly IHttpContextAccessor _httpContextAccessor;
-        private readonly myTunesDbContext _myTunesDbContext;
+        private readonly ICategoryService _categoryService;
 
-        public SongController(IHttpContextAccessor httpContextAccessor, myTunesDbContext myTunesDbContext)
+        public CategoriesController(ICategoryService categoryService)
         {
-            _httpContextAccessor = httpContextAccessor;
-            _myTunesDbContext = myTunesDbContext;
+            _categoryService = categoryService;
         }
 
         [HttpGet]
-        public ActionResult<Song> Get()
+        public ActionResult<IEnumerable<CategoryDto>> Get()
         {
-            var songId = _httpContextAccessor.HttpContext.Request.Headers["#Id"].ToString();
-            var song = _myTunesDbContext.Songs.FirstOrDefault(b => b.Id.ToString() == songId);
-            if (song == null)
-            {
-                return NotFound("El autor no existe.");
-            }
+            var serviceResult = _categoryService.GetCategories();
+            if (serviceResult.ResponseCode != ResponseCode.Success)
+                return BadRequest(serviceResult.Error);
 
-            return Ok(new Song
+            return Ok(serviceResult.Result.Select(x => new CategoryDto
             {
-                Id = song.Id,
-                Name = song.Name,
-                Author = song.Author,
-                Duration = song.Duration,
-                Popularity = song.Popularity,
-                Price = song.Price
-                
-            });
+                Description = x.Description,
+                Id = x.Id
+            }));
         }
 
         [HttpGet]
-        [Route("{id}/songs")]
-        public ActionResult<IEnumerable<Song>> Get([FromQuery] int id)
+        [Route("{categoryId}/products")]
+        public ActionResult<IEnumerable<ProductDto>> Get(int categoryId)
         {
-            var list = _myTunesDbContext.Songs.Where(s => s.Id == id);
-            return Ok(list.Select(s => new Song
+            var serviceResult = _categoryService.GetProductsByCategory(categoryId);
+            if (serviceResult.ResponseCode != ResponseCode.Success)
+                return BadRequest(serviceResult.Error);
+
+            var products = serviceResult.Result;
+            return Ok(products.Select(p => new ProductDto
             {
-                Id = s.Id,
-                Name = s.Name,
-                Author = s.Author,
-                Duration = s.Duration,
-                Popularity = s.Popularity,
-                Price = s.Price
+                Id = p.Id,
+                BrandName = p.Brand.Name,
+                Name = p.Name,
+                Stock = p.Stock,
+                CategoryName = p.Category.Description,
+                Price = p.Price
             }));
         }
     }

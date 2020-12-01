@@ -12,15 +12,6 @@ namespace myTunes.Infrastructure.Configurations
 
             builder.Property(x => x.Id).ValueGeneratedOnAdd();
 
-            builder.Property(x => x.Name).IsRequired();
-
-            builder.Property(x => x.Author).IsRequired();
-
-            builder.Property(x => x.Price).IsRequired();
-
-            builder.Property(x => x.Duration).IsRequired();
-
-            builder.Property(x => x.Popularity).IsRequired();
         }
     }
 }
