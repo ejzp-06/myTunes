@@ -1,0 +1,11 @@
+C:\Users\ejzp_\source\repos\myTunes\myTunes.Infrastructure\obj\Debug\netcoreapp3.1\myTunes.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\ejzp_\source\repos\myTunes\myTunes.Infrastructure\obj\Debug\netcoreapp3.1\myTunes.Infrastructure.AssemblyInfo.cs
+C:\Users\ejzp_\source\repos\myTunes\myTunes.Infrastructure\bin\Debug\netcoreapp3.1\myTunes.Infrastructure.deps.json
+C:\Users\ejzp_\source\repos\myTunes\myTunes.Infrastructure\bin\Debug\netcoreapp3.1\myTunes.Infrastructure.runtimeconfig.json
+C:\Users\ejzp_\source\repos\myTunes\myTunes.Infrastructure\bin\Debug\netcoreapp3.1\myTunes.Infrastructure.runtimeconfig.dev.json
+C:\Users\ejzp_\source\repos\myTunes\myTunes.Infrastructure\bin\Debug\netcoreapp3.1\myTunes.Infrastructure.dll
+C:\Users\ejzp_\source\repos\myTunes\myTunes.Infrastructure\bin\Debug\netcoreapp3.1\myTunes.Infrastructure.pdb
+C:\Users\ejzp_\source\repos\myTunes\myTunes.Infrastructure\obj\Debug\netcoreapp3.1\myTunes.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\ejzp_\source\repos\myTunes\myTunes.Infrastructure\obj\Debug\netcoreapp3.1\myTunes.Infrastructure.dll
+C:\Users\ejzp_\source\repos\myTunes\myTunes.Infrastructure\obj\Debug\netcoreapp3.1\myTunes.Infrastructure.pdb
+C:\Users\ejzp_\source\repos\myTunes\myTunes.Infrastructure\obj\Debug\netcoreapp3.1\myTunes.Infrastructure.genruntimeconfig.cache

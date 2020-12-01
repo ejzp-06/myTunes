@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Universidad\\Aplicaciones de Vanguardia\\myTunes\\myTunes.Core\\myTunes.Core.csproj": {}
+    "C:\\Users\\ejzp_\\source\\repos\\myTunes\\myTunes.Core\\myTunes.Core.csproj": {}
   },
   "projects": {
-    "E:\\Universidad\\Aplicaciones de Vanguardia\\myTunes\\myTunes.Core\\myTunes.Core.csproj": {
+    "C:\\Users\\ejzp_\\source\\repos\\myTunes\\myTunes.Core\\myTunes.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Universidad\\Aplicaciones de Vanguardia\\myTunes\\myTunes.Core\\myTunes.Core.csproj",
+        "projectUniqueName": "C:\\Users\\ejzp_\\source\\repos\\myTunes\\myTunes.Core\\myTunes.Core.csproj",
         "projectName": "myTunes.Core",
-        "projectPath": "E:\\Universidad\\Aplicaciones de Vanguardia\\myTunes\\myTunes.Core\\myTunes.Core.csproj",
+        "projectPath": "C:\\Users\\ejzp_\\source\\repos\\myTunes\\myTunes.Core\\myTunes.Core.csproj",
         "packagesPath": "C:\\Users\\ejzp_\\.nuget\\packages\\",
-        "outputPath": "E:\\Universidad\\Aplicaciones de Vanguardia\\myTunes\\myTunes.Core\\obj\\",
+        "outputPath": "C:\\Users\\ejzp_\\source\\repos\\myTunes\\myTunes.Core\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ejzp_\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -37,6 +37,26 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Relational": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
